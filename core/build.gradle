@@ -1,0 +1,21 @@
+/*
+ * ************************************************************
+ * 文件：build.gradle  模块：core  项目：component
+ * 当前修改时间：2021年02月27日 15:30:04
+ * 上次修改时间：2021年02月27日 14:54:42
+ * 作者：Cody.yi   https://github.com/codyer
+ *
+ * 描述：core
+ * Copyright (c) 2021
+ * ************************************************************
+ */
+
+apply from: "${project.rootDir}/config-aar.gradle"
+dependencies {
+    api project(':cat-core')
+    api project(':update-core')
+    api project(":hybrid-core")
+    api project(":marquee-core")
+    api project(':banner-core')
+    api project(":http-core")
+}

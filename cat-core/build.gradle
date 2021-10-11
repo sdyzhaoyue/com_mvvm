@@ -1,0 +1,21 @@
+/*
+ * ************************************************************
+ * 文件：build.gradle  模块：http-cat  项目：component
+ * 当前修改时间：2019年04月23日 18:23:19
+ * 上次修改时间：2019年04月13日 08:43:54
+ * 作者：Cody.yi   https://github.com/codyer
+ *
+ * 描述：http-cat
+ * Copyright (c) 2019
+ * ************************************************************
+ */
+
+apply from: "${project.rootDir}/config-aar.gradle"
+dependencies {
+    api project(':app-core')
+    api rootProject.ext.dependencies["okhttp3"]
+    api rootProject.ext.dependencies["legacy"]
+    api rootProject.ext.dependencies["room-runtime"]
+    api rootProject.ext.dependencies["jsonhandleview"]
+    annotationProcessor rootProject.ext.dependencies["room-compiler"]
+}

@@ -1,0 +1,32 @@
+/*
+ * ************************************************************
+ * 文件：config-local-maven.gradle  模块：component  项目：component
+ * 当前修改时间：2019年04月23日 18:23:20
+ * 上次修改时间：2019年04月13日 08:44:03
+ * 作者：Cody.yi   https://github.com/codyer
+ *
+ * 描述：component
+ * Copyright (c) 2019
+ * ************************************************************
+ */
+apply plugin: 'maven'
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: LOCAL_REPOSITORY) {
+                pom.groupId = LOCAL_GROUP_ID// 唯一标识（通常为模块包名，也可以任意）
+                pom.artifactId = this.getName() // 项目名称（通常为类库模块名称，也可以任意）
+                pom.version = rootProject.ext.componentVersion // 版本号
+            }
+            pom.whenConfigured { pom ->
+                pom.dependencies.forEach { dep ->
+                    if (dep.getVersion() == "unspecified") {
+                        println("--modify the dependenies module in pom.xml--->>" + dep.getArtifactId())
+                        dep.setGroupId(LOCAL_GROUP_ID)
+                        dep.setVersion(rootProject.ext.componentVersion)
+                    }
+                }
+            }
+        }
+    }
+}

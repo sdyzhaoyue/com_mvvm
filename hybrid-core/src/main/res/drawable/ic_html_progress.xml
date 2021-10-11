@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ *************************************************************
+  ~ 文件：ic_html_progress.xml  模块：hybrid-core  项目：component
+  ~ 当前修改时间：2019年04月23日 18:23:20
+  ~ 上次修改时间：2019年04月13日 08:44:03
+  ~ 作者：Cody.yi   https://github.com/codyer
+  ~
+  ~ 描述：hybrid-core
+  ~ Copyright (c) 2019
+  ~ *************************************************************
+  -->
+
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="2dp"/>
+            <gradient
+                android:angle="270"
+                android:centerColor="@color/uiColorWhite"
+                android:endColor="@color/uiColorWhite"
+                android:startColor="@color/uiColorWhite"/>
+        </shape>
+    </item>
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape>
+                <corners android:radius="2dp"/>
+                <gradient
+                    android:centerColor="@color/uiColorPrimary"
+                    android:endColor="@color/uiColorPrimary"
+                    android:startColor="@color/uiColorPrimary"/>
+
+            </shape>
+        </clip>
+    </item>
+
+</layer-list>

@@ -1,0 +1,15 @@
+/*
+ * ************************************************************
+ * 文件：build.gradle  模块：compiler  项目：component
+ * 当前修改时间：2021年02月27日 15:30:04
+ * 上次修改时间：2021年02月27日 14:54:00
+ * 作者：Cody.yi   https://github.com/codyer
+ *
+ * 描述：compiler
+ * Copyright (c) 2021
+ * ************************************************************
+ */
+apply from:  "${project.rootDir}/config-compiler.gradle"
+dependencies {
+    implementation project(':http-compiler')
+}

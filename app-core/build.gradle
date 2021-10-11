@@ -1,0 +1,21 @@
+/*
+ * ************************************************************
+ * 文件：build.gradle  模块：app-core  项目：component
+ * 当前修改时间：2019年04月23日 18:23:19
+ * 上次修改时间：2019年04月23日 18:19:41
+ * 作者：Cody.yi   https://github.com/codyer
+ *
+ * 描述：app-core
+ * Copyright (c) 2019
+ * ************************************************************
+ */
+
+apply from: "${project.rootDir}/config-aar.gradle"
+dependencies {
+    api rootProject.ext.dependencies["constraintlayout"]
+    api rootProject.ext.dependencies["easypermissions"]
+    api rootProject.ext.dependencies["recyclerviewheader"]
+    api project(':bind-core')
+    //沉浸式 更改系统状态栏颜色
+    api rootProject.ext.dependencies["immersionbar"]
+}
